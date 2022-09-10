@@ -4,6 +4,9 @@
   box-sizing: border-box;
   font-family: "Source Sans Pro", sans-serif;
 }
+html{
+  scroll-behavior: smooth;
+}
 body {
   background-color: black;
 }
@@ -90,7 +93,7 @@ body {
   }
 }
 .skills {
-  background-color: grey;
+  background-color: rgb(45, 44, 44);
   // width: 100%;
   padding: 2rem;
 
@@ -104,9 +107,41 @@ body {
       width: max-content;
       border-bottom: 3px solid white;
     }
+    .icon-container {
+      margin: 0 auto;
+      width: 90%;
+      padding: 2rem 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
+      row-gap: 2.5rem;
+      column-gap: 1rem;
+      justify-content: space-evenly;
+      justify-items: center;
+      align-items: center;
+
+      img {
+        width: 70%;
+        max-width: 100px;
+        max-height: 100px;
+        transition: 0.3s;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
   }
 }
 @media (max-width: 780px) {
+  .skills {
+    .skills-container {
+      .icon-container {
+        grid-template-columns: repeat(auto-fill,minmax(70px,15vw));
+        row-gap: 30px;
+        column-gap: 30px;
+      }
+    }
+  }
   .hero {
     .hero-content {
       text-align: center;

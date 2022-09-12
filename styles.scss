@@ -216,23 +216,74 @@ body {
     justify-items: center;
     align-items: center;
 
-    .projects-card{
+    .projects-card {
       //background-color: lightblue;
       max-width: 350px;
+      position: relative;
+      transition: 0.3s ease-in-out;
 
-      h3{
+      h3 {
         color: white;
         text-transform: uppercase;
         letter-spacing: 3px;
         margin-bottom: 1rem;
       }
-      img{
+      img {
         width: 100%;
         border-radius: 15px;
-        border: 2px solid whitesmoke;
+
+      }
+      .project-card-img {
+
+        .project-card-overlay {
+          background: rgba(0, 0, 0, 0.941);
+
+          color: white;
+          border-radius: 15px;
+          position: absolute;
+          width: 100%;
+          height: calc(85% - 6px);
+          top: 16%;
+          left: 0;
+          opacity: 1;
+          padding: 2.625rem;
+          line-height: 1.3rem;
+         
+          
+
+          .project-icons{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+            margin: 0.125rem;
+            padding: 1rem;
+            
+
+            img{
+              width: 40px;
+              height: 40px;
+              filter: invert(100%);
+              transition: 0.2s;
+              
+              &:hover{
+                transform: scale(0.9);
+                
+              }
+            }
+          }
+        }
       }
     }
   }
+}
+.active {
+  background-color: red;
+  z-index: 5;
+}
+.contact {
+  padding: 3rem;
+  background-color: black;
 }
 @media (max-width: 780px) {
   .about {

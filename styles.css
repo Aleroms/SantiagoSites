@@ -208,6 +208,8 @@ body {
 }
 .projects .projects-container .projects-card {
   max-width: 350px;
+  position: relative;
+  transition: 0.3s ease-in-out;
 }
 .projects .projects-container .projects-card h3 {
   color: white;
@@ -218,7 +220,46 @@ body {
 .projects .projects-container .projects-card img {
   width: 100%;
   border-radius: 15px;
-  border: 2px solid whitesmoke;
+}
+.projects .projects-container .projects-card .project-card-img .project-card-overlay {
+  background: rgba(0, 0, 0, 0.941);
+  color: white;
+  border-radius: 15px;
+  position: absolute;
+  width: 100%;
+  height: calc(85% - 6px);
+  top: 16%;
+  left: 0;
+  opacity: 1;
+  padding: 2.625rem;
+  line-height: 1.3rem;
+}
+.projects .projects-container .projects-card .project-card-img .project-card-overlay .project-icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0.125rem;
+  padding: 1rem;
+}
+.projects .projects-container .projects-card .project-card-img .project-card-overlay .project-icons img {
+  width: 40px;
+  height: 40px;
+  filter: invert(100%);
+  transition: 0.2s;
+}
+.projects .projects-container .projects-card .project-card-img .project-card-overlay .project-icons img:hover {
+  transform: scale(0.9);
+}
+
+.active {
+  background-color: red;
+  z-index: 5;
+}
+
+.contact {
+  padding: 3rem;
+  background-color: black;
 }
 
 @media (max-width: 780px) {

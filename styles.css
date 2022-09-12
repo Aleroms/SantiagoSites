@@ -219,7 +219,11 @@ body {
 }
 .projects .projects-container .projects-card img {
   width: 100%;
+  max-height: 200px;
   border-radius: 15px;
+}
+.projects .projects-container .projects-card .project-card-img {
+  width: 300px;
 }
 .projects .projects-container .projects-card .project-card-img .project-card-overlay {
   background: rgba(0, 0, 0, 0.941);
@@ -232,7 +236,7 @@ body {
   top: 16%;
   left: 0;
   opacity: 1;
-  padding: 2.625rem;
+  padding: 1rem;
   line-height: 1.3rem;
 }
 .projects .projects-container .projects-card .project-card-img .project-card-overlay .project-icons {
@@ -254,8 +258,13 @@ body {
 }
 
 .contact {
-  padding: 3rem;
+  background-image: url(./images/hero-bg3.jpg);
   background-color: black;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 3rem;
 }
 .contact h2 {
   font-size: 2rem;
@@ -273,12 +282,48 @@ body {
   margin: 1rem;
 }
 .contact .contact-container img {
-  width: 100px;
+  max-width: 100px;
   height: 100px;
   margin-top: 3rem;
 }
 
+.footer {
+  background-color: black;
+  padding: 1rem;
+}
+.footer a {
+  margin: 1rem 3rem;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+.footer a:hover {
+  color: orangered;
+  transform: scale(1.1);
+}
+.footer h3 {
+  color: rgb(45, 44, 44);
+  display: block;
+  margin-top: 1rem;
+}
+.footer h3 span {
+  color: gray;
+}
+
 @media (max-width: 780px) {
+  .contact {
+    padding: 1rem;
+    background-image: none;
+  }
+  .contact .contact-container {
+    margin: 0.5rem;
+  }
+  .contact .contact-container img {
+    max-width: 50%;
+  }
+  .projects .projects-container .projects-card .project-card-img .project-card-overlay {
+    padding: 1rem;
+  }
   .about {
     padding: 1rem;
   }
@@ -326,6 +371,7 @@ body {
   }
   #slider .slider-menu {
     display: flex;
+    z-index: 3;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
